@@ -7,7 +7,11 @@ from databaseOP import check_user, add_score
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
+    level=logging.INFO,
+    handlers=[
+        logging.FileHandler("bot.log"),
+        logging.StreamHandler(),
+    ]
 )
 
 
